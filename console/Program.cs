@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Dynamic;
 using System.IO;
 using RazorLight;
 
@@ -22,7 +23,11 @@ namespace console
                 Text = "Some text"
             };
 
-            string result = engine.CompileRenderAsync("Body.cshtml", model).Result;
+            dynamic viewbag = new ExpandoObject();
+            viewbag.Title = "This is the Viewbag Title";
+            viewbag.TitleImageSource = "http://www.google.com";
+
+            string result = engine.CompileRenderAsync("Body.cshtml", model, viewbag).Result;
             Console.WriteLine(result);
             Console.Read();
 

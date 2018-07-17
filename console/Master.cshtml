@@ -1,5 +1,4 @@
 @using RazorLight;
-@inherits TemplatePage<console.EmailTemplateViewModel>
 
 <html>
 <head>
@@ -7,11 +6,11 @@
 </head>
 <body>
     <div>
-        <h1>Header</h1>
+        <h1>@ViewBag.Title</h1>
     </div>
     <div>
-        <h2>@Model.ContentTitle</h2>
-        <img src="@Model.ContentImage" />
+        <h2</h2>
+        <img src="@ViewBag.TitleImageSource" />
         <div>
             @RenderBody()
         </div>
