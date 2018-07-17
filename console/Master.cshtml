@@ -1,0 +1,23 @@
+@using RazorLight;
+@inherits TemplatePage<console.EmailTemplateViewModel>
+
+<html>
+<head>
+
+</head>
+<body>
+    <div>
+        <h1>Header</h1>
+    </div>
+    <div>
+        <h2>@Model.ContentTitle</h2>
+        <img src="@Model.ContentImage" />
+        <div>
+            @RenderBody()
+        </div>
+    </div>
+    <div>
+        <h4>Footer</h4>
+    </div>
+</body>
+</html>

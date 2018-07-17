@@ -1,0 +1,12 @@
+@using RazorLight;
+@inherits TemplatePage<console.EmailTemplateViewModel>
+@{
+// Layout = "Master.cshtml";
+}
+
+<div>
+    <h1>@Model.ContentTitle</h1>
+    <div>
+        @Model.Text
+    </div>
+ </div>
